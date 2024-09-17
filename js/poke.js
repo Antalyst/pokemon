@@ -4,13 +4,22 @@ const app = Vue.createApp({
             pokemonName: '',
             pokemons: [],
             searchpoke: null,
-            searchPokeName:''
+            searchPokeName:'',
+            isModalVisible: true,
+            selectedPokemon: null
         };
     },
     created() {
         this.pokenames(); // Fetch all Pokémon on component load
     },
     methods: {
+
+        showPokemonAttributes (pokemon) {
+            this.selectedPokemon = pokemon
+            this.isModalVisible = true // Trigger the modal
+            $(this.$refs.modal).modal('show');
+        },
+
         async pokeInfo() {
             try {
                 const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${this.pokemonName}`);
