@@ -20,7 +20,6 @@ body {
     box-shadow: 2px 2px 5px rgba(5, 5, 5, 0.575);
     padding: 10px;
     background-color: rgba(167, 10, 10, 0.993);
-    position: fixed;
 }
 .logo, .search-box, .main-logo, .main-view {
     width: 100%; 
