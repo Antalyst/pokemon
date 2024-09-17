@@ -28,7 +28,7 @@
                 <p class="type" v-if="searchpoke">Type: {{ searchpoke.types[0].type.name }} </p>
             </div>
             <div class="pokemon-box">
-                <div @click="showPokemonAttributes(pokemon)" class="pokemon-pcs" v-for="pokemon in pokemons" :key="pokemon.name">
+                <div style="cursor: pointer;" @click="showPokemonAttributes(pokemon)" class="pokemon-pcs" v-for="pokemon in pokemons" :key="pokemon.name">
                     <img :src="pokemon.img" :alt="pokemon.name">
                     <p>{{ pokemon.name }}</p>
                 </div>
